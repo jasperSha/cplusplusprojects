@@ -3,23 +3,21 @@
 using namespace std;
 
 class Rectangle {
-	
-	private:
-		double width, height;
 
-	public:
-		Rectangle();
-		Rectangle(double w, double h);
+    private:
+        double width, height;
 
-		void setWidth(double w);
-		void setHeight(double h);		
+    public:
+        Rectangle();
+        Rectangle(double w, double h);
 
-		double getWidth() const;
-		double getHeight() const;	
-		
-		double getArea() const;
-		double getPerimeter() const;
+        void setWidth(double w);
+        void setHeight(double h);		
 
-		
-		
+        double getWidth() const;
+        double getHeight() const;	
+
+        double getArea() const;
+        double getPerimeter() const;
+
 };

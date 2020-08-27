@@ -2,16 +2,20 @@
 using namespace std;
 
 int bin2Dec(const string& binaryString) {
-    int len = binaryString.length();
+    int len = binaryString.size();
 
-    int bin_arr[len + 1];
-    for (int i = 0; i < len; i++)
-        bin_arr[i] = binaryString[i];
+    int binArr[len];
+    for (int i = 0; i < len; i++) {
+        binArr[i] = int(binaryString[i] - '0');
+    }
 
+    int binSum = 0;
+    int temp = 1;
+    for (int i = len - 1; i >= 0; i--) {
+        binSum += binArr[i] * temp;
+        temp *= 2;
+    }
 
-    int binSum, temp;
-    for (int i = len; i > 0; i--) {
-        binSum = binSum * 2 + 
 
 
     return binSum;
@@ -21,11 +25,12 @@ int bin2Dec(const string& binaryString) {
 int main() {
 
     string binString;
-    cout << "enter the binary string: " << endl;
+    cout << "Enter the binary string: " << endl;
     cin >> binString;
+    int binSum = bin2Dec(binString);
+    cout << "The decimal conversion is: " << binSum << endl;
 
-    for (int i = 0; i < binString.length(); i++)
-        cout << binString[i] << endl;
+    getchar();
     return 0;
 
 }
