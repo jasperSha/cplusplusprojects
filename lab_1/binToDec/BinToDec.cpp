@@ -2,13 +2,61 @@
 using namespace std;
 
 int bin2Dec(const string& binaryString) {
-	int ind = binaryString.length();
+    int len = binaryString.length();
 
-	char bin_arr[ind + 1];
-	
-	strcpy(bin_arr, binaryString.c_str());
+    int bin_arr[len + 1];
+    for (int i = 0; i < len; i++)
+        bin_arr[i] = binaryString[i];
 
-	for (int i = 0; i < ind; i++)
 
+    int binSum, temp;
+    for (int i = len; i > 0; i--) {
+        binSum = binSum * 2 + 
+
+
+    return binSum;
 
 }
+
+int main() {
+
+    string binString;
+    cout << "enter the binary string: " << endl;
+    cin >> binString;
+
+    for (int i = 0; i < binString.length(); i++)
+        cout << binString[i] << endl;
+    return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
